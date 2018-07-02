@@ -17,25 +17,7 @@ set(
 	CMAKE_CXX_LINK_FLAGS 
 )
 
-#Generate the shared library from the sources
-#add_library(exchange SHARED ${SOURCES})
-
-add_executable(
-    latency_order_book
-    ${liquibook_SOURCE_DIR}/src/simple_order.cpp
-    ${liquibook_SOURCE_DIR}/src/latency_order_book.cpp
-)
-
-add_executable(
-    perf_order_book
-    ${liquibook_SOURCE_DIR}/src/simple_order.cpp
-    ${liquibook_SOURCE_DIR}/src/perf_order_book.cpp
-)
-
-target_link_libraries(
-    latency_order_book
-)
-
-target_link_libraries(
-    perf_order_book
-)
+add_subdirectory(src)
+add_subdirectory(test)
+enable_testing()
+add_test (NAME UnitTests COMMAND LiquibookTest)
