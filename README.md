@@ -18,7 +18,7 @@ test-bed for trading algorithms, etc.
 
 The liquibook engine fits in the matching engine framework like this 
 
-Inline-style: 
+## Design
 ![alt text](https://github.com/objectcomputing/liquibook/raw/master/doc/Images/MarketApplication.png "Matching Engine")
 
 In addition to the order matching process itself, Liquibook can be configured
